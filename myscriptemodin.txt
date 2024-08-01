@@ -1,0 +1,1194 @@
+#Emodin sequences were downloaded using curl.
+
+#Slurm script to download emodin sequences
+
+#!/bin/bash
+#SBATCH --job-name=download_sequences
+#SBATCH --output=download_sequences_%j.out
+#SBATCH --error=download_sequences_%j.err
+#SBATCH -N 1
+#SBATCH -n 33
+#SBATCH -p defq-48core 
+
+cd /work/ac267/metaphlan/emodin
+
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/cb04f496-d5bb-45d6-ab2a-100daa15bb50/F16_CP05177_S755_L003_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF16_CP05177_L003_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=DByJllo5qOlunb%2FNbShwkCzDRQE%3D&Expires=1715208470'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/587760d8-d9fb-48c6-8cd7-2dffc41f1a38/F16_CP05177_S755_L003_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF16_CP05177_L003_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=9TnXZmMF%2BDn%2F0XIqyj16QRww7z4%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/2debe6a9-11dd-43b0-853c-f342e8aef891/F17_CP05177_S756_L003_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF17_CP05177_L003_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=hd1s8jAFCaiVXmYi%2FN0jG%2BgJ%2Fyc%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/21a9e92c-4b6e-4d5f-8599-82a92164ae0f/F17_CP05177_S756_L003_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF17_CP05177_L003_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=8YR53nZYibymz%2BFzoPcJQIgvl8k%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/8fdb009d-b2f8-40c9-9662-3baf15ce0f15/F18_CP05177_S757_L003_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF18_CP05177_L003_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=9ufnFjkDy7ZrNvR5OpC%2FfZNnn8M%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/5f7b68eb-73fc-4cb4-bfb4-e6b4878579f3/F18_CP05177_S757_L003_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF18_CP05177_L003_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=Hk9T6r%2BTY5UjeEsmFo3eh3cpvXY%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/ps_samples/usc_cp05177_concat_data_20230707/F19_ab_CP05177_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF19_ab_CP05177_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=lvqFLGdsV7tlkadNoXTiTaieLes%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/ps_samples/usc_cp05177_concat_data_20230707/F19_ab_CP05177_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF19_ab_CP05177_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=dllyPBgyGL%2FJLI5Zc%2FoQA7c2GYk%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/2d361cdb-7be8-42f4-a1c7-0b4d7246c95c/F20_CP05177_S759_L003_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF20_CP05177_L003_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=7oAsdOVHUnfvdoZMAbCf35gSVr0%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/fdb0af36-ab0b-4387-a222-c084cc4dc2e2/F20_CP05177_S759_L003_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF20_CP05177_L003_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=Xvmnfvm17ZpoAFpfPtJoYeg5%2FCs%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/bcdbe490-8a99-4134-8e49-609ddaab79e7/181997-E0-P1-Q1-CIDL1-0365_S43_L002_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF21_CP05177_L002_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=teNWdiogVS81mNOPX%2Fy%2BMM50BI8%3D&Expires=1715208470'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/bcdbe490-8a99-4134-8e49-609ddaab79e7/181997-E0-P1-Q1-CIDL1-0365_S43_L002_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF21_CP05177_L002_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=tNX0ql6i7TZJeI48r1CSSk7b%2Fcs%3D&Expires=1715208470'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/dfe63d24-c3e5-449d-b385-effb591a6214/F22_CP05177_S760_L003_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF22_CP05177_L003_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=EmhJpehMUYiS7kyFBgmL3KmKE9Q%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/6a10a847-76fb-48c0-8a0c-694ed428c1fc/F22_CP05177_S760_L003_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF22_CP05177_L003_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=6htDV6D63mZcC4BVzao79w%2F%2FckE%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/35f14b88-079a-4f9b-a304-f723ce4cd368/F23_CP05177_S761_L003_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF23_CP05177_L003_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=EziO%2BVv7afKH3gjZns%2FWZDWv48g%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/ea8244fe-7fff-4b4d-b534-fa992ac9c8a0/F23_CP05177_S761_L003_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF23_CP05177_L003_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=BtLTztN0O6588bxocpO8BTrGFBQ%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/a7ec267e-6ee8-42c3-804f-b531b1c4a362/F24_CP05177_S762_L003_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF24_CP05177_L003_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=DtKsIJb%2B3O8%2BNMNcfGtKjps3zJA%3D&Expires=1715208470'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/bbb7ea9b-8760-44d5-968c-cec2b231ee8a/F24_CP05177_S762_L003_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF24_CP05177_L003_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=17mNdvF8pV5spToIL1fTO7reEms%3D&Expires=1715208470'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/a7cfa360-58d0-485e-906c-6992a1a09f25/182001-E0-P4-Q1-CIDL1-0374_S24_L002_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF25_CP05177_L002_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=DMPF8oTatXFKeVsTltHAHUvPsxk%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/a7cfa360-58d0-485e-906c-6992a1a09f25/182001-E0-P4-Q1-CIDL1-0374_S24_L002_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF25_CP05177_L002_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=cCMV0axf%2BMDRJhtm1HXFLYWS5QE%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/3570e4e4-1d18-4c50-9a17-99948a35195d/F26_CP05177_S764_L003_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF26_CP05177_L003_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=UOl8SmdjAlxPFEKwV1XP8g62%2F3A%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/6384ad03-daf3-452b-8eb9-a31177abb56b/F26_CP05177_S764_L003_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF26_CP05177_L003_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=%2BBf64JWpzWFA8cmXw22EmdMZWTM%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/deef1eb2-0860-479f-9daf-bc329b5a4bfd/F27_CP05177_S765_L003_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF27_CP05177_L003_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=FUnQhRc4TUr3rAmyaouASHjxNmI%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/cli/user_3c801934-f0f3-41ac-80a6-ed87a6cac4c5/b9b8bd88-5c73-4a3a-aeca-d740937c2c00/F27_CP05177_S765_L003_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF27_CP05177_L003_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=BMjUFIXQXlaiM5fkFl0tgJ0yvC0%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/c159882b-f76b-4ee3-ba15-4ddbf91166fc/182004-E0-P1-Q1-CIDL1-0365_S50_L002_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF28_CP05177_L002_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=62ElRYmVPyy3taqKYyZwV61OKyU%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/c159882b-f76b-4ee3-ba15-4ddbf91166fc/182004-E0-P1-Q1-CIDL1-0365_S50_L002_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF28_CP05177_L002_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=Oi349lwHnKAd6m27yFJUbQ3ThbE%3D&Expires=1715208471'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/9af0c5cb-1c22-40ba-a32f-9ee7c3a4d567/182005-E0-P1-Q1-CIDL1-0365_S51_L002_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF29_CP05177_L002_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=V2s7n3QjoMJY22G92J8XgQxPN1s%3D&Expires=1715208470'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/9af0c5cb-1c22-40ba-a32f-9ee7c3a4d567/182005-E0-P1-Q1-CIDL1-0365_S51_L002_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF29_CP05177_L002_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=72EMzcHEYKDyqSghBkjQ7iMlKVM%3D&Expires=1715208470'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/ee7c6392-155f-43cc-9fc7-1206014458f3/182006-E0-P1-Q1-CIDL1-0365_S52_L002_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF30_CP05177_L002_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=9Nf7zShZAh8XnJij1ahYpd7FA1k%3D&Expires=1715208470'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/ee7c6392-155f-43cc-9fc7-1206014458f3/182006-E0-P1-Q1-CIDL1-0365_S52_L002_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF30_CP05177_L002_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=8pwpWLejdEnqk%2FoynG9heFEbFhA%3D&Expires=1715208470'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/ee7c6392-155f-43cc-9fc7-1206014458f3/182006-E0-P1-Q1-CIDL1-0365_S52_L001_R1_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF30_CP05177_L001_R1_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=X5YS%2FQkShVVld%2FSv9ZO7FggDVuQ%3D&Expires=1715208470'
+curl --remote-header-name --remote-name 'https://s3.amazonaws.com/cosmosid-genius-production/origin_files/illumina_import/ee7c6392-155f-43cc-9fc7-1206014458f3/182006-E0-P1-Q1-CIDL1-0365_S52_L001_R2_001.fastq.gz?response-content-type=binary%2Foctet-stream&response-content-disposition=attachment%3Bfilename%3DF30_CP05177_L001_R2_001.fastq.gz&AWSAccessKeyId=AKIAJ2VRMM2B6XYJ2QSA&Signature=P8qNnuNSNE6lDP4FoCrnFWi6ebw%3D&Expires=1715208470'
+
+echo "All sequences downloaded successfully!"
+
+#Peforming MetaPhlAn
+
+cd /work/ac267/metaphlan/
+module load python3/anaconda/2023.9
+source activate mpa
+conda activate new_env
+
+nano emodinmeta.sh
+
+#Slurm script for performing metaphlan
+nano metaemodin.sh
+
+#!/bin/bash
+#SBATCH --job-name=emometaphlan
+#SBATCH --output=emometaphlan_%j.out
+#SBATCH --error=emometaphlan_%j.err
+#SBATCH -N 1
+#SBATCH -n 33
+#SBATCH -p defq-48core 
+
+cd /work/ac267/metaphlan/emodin
+
+for file in *.fastq.gz; do
+    output_file="emodin_results/${file%.fastq.gz}.txt"
+    metaphlan "$file" --input_type fastq > "$output_file"
+done
+
+echo "MetaPhlAn analysis completed for all files"
+
+sbatch metaemodin.sh
+Submitted batch job 16298870
+
+#Merging output files
+
+mkdir emodin_output
+merge_metaphlan_tables.py \
+F16_CP05177_L003_R1_001.txt  F21_CP05177_L002_R2_001.txt  F27_CP05177_L003_R1_001.txt
+F16_CP05177_L003_R2_001.txt  F22_CP05177_L003_R1_001.txt  F27_CP05177_L003_R2_001.txt
+F17_CP05177_L003_R1_001.txt  F22_CP05177_L003_R2_001.txt  F28_CP05177_L002_R1_001.txt
+F17_CP05177_L003_R2_001.txt  F23_CP05177_L003_R1_001.txt  F28_CP05177_L002_R2_001.txt
+F18_CP05177_L003_R1_001.txt  F23_CP05177_L003_R2_001.txt  F29_CP05177_L002_R1_001.txt
+F18_CP05177_L003_R2_001.txt  F24_CP05177_L003_R1_001.txt  F29_CP05177_L002_R2_001.txt
+F19_ab_CP05177_R1_001.txt    F24_CP05177_L003_R2_001.txt  F30_CP05177_L001_R1_001.txt
+F19_ab_CP05177_R2_001.txt    F25_CP05177_L002_R1_001.txt  F30_CP05177_L001_R2_001.txt
+F20_CP05177_L003_R1_001.txt  F25_CP05177_L002_R2_001.txt  F30_CP05177_L002_R1_001.txt
+F20_CP05177_L003_R2_001.txt  F26_CP05177_L003_R1_001.txt  F30_CP05177_L002_R2_001.txt
+F21_CP05177_L002_R1_001.txt  F26_CP05177_L003_R2_001.txt
+> output/merged_abundance_newtable.txt
+
+
+merge_metaphlan_tables.py \
+F16_CP05177_L003_R1_001.txt \
+F16_CP05177_L003_R2_001.txt \
+F17_CP05177_L003_R1_001.txt \
+F17_CP05177_L003_R2_001.txt \
+F18_CP05177_L003_R1_001.txt \
+F18_CP05177_L003_R2_001.txt \
+F19_ab_CP05177_R1_001.txt \
+F19_ab_CP05177_R2_001.txt \
+F20_CP05177_L003_R1_001.txt \
+F20_CP05177_L003_R2_001.txt \
+F21_CP05177_L002_R1_001.txt \
+F21_CP05177_L002_R2_001.txt \
+F22_CP05177_L003_R1_001.txt \
+F22_CP05177_L003_R2_001.txt \
+F23_CP05177_L003_R1_001.txt \
+F23_CP05177_L003_R2_001.txt \
+F24_CP05177_L003_R1_001.txt \
+F24_CP05177_L003_R2_001.txt \
+F25_CP05177_L002_R1_001.txt \
+F25_CP05177_L002_R2_001.txt \
+F26_CP05177_L003_R1_001.txt \
+F26_CP05177_L003_R2_001.txt \
+F27_CP05177_L003_R1_001.txt \
+F27_CP05177_L003_R2_001.txt \
+F28_CP05177_L002_R1_001.txt \
+F28_CP05177_L002_R2_001.txt \
+F29_CP05177_L002_R1_001.txt \
+F29_CP05177_L002_R2_001.txt \
+F30_CP05177_L001_R1_001.txt \
+F30_CP05177_L001_R2_001.txt \
+F30_CP05177_L002_R1_001.txt \
+F30_CP05177_L002_R2_001.txt \
+> merged_abundance_newtable.txt
+
+#For creating a taxon-by-sample: This is how I was able to sort the species list using metaphlan
+conda install -c biobakery hclust2
+grep -E "s__|SRS" merged_abundance_newtable.txt \
+> | grep -v "t__" \
+> | sed "s/^.*|//g" \
+> | sed "s/SRS[0-9]*-//g" \
+> > merged_abundance_table_species.txt
+
+
+#Finding the number of reads
+ cat count_reads.sh
+#!/bin/bash
+
+for file in F16_CP05177_L003_R1_001.fastq.gz F16_CP05177_L003_R2_001.fastq.gz F17_CP05177_L003_R1_001.fastq.gz F17_CP05177_L003_R2_001.fastq.gz F18_CP05177_L003_R1_001.fastq.gz F18_CP05177_L003_R2_001.fastq.gz F19_ab_CP05177_R1_001.fastq.gz F19_ab_CP05177_R2_001.fastq.gz F20_CP05177_L003_R1_001.fastq.gz F20_CP05177_L003_R2_001.fastq.gz F21_CP05177_L002_R1_001.fastq.gz F21_CP05177_L002_R2_001.fastq.gz F22_CP05177_L003_R1_001.fastq.gz F22_CP05177_L003_R2_001.fastq.gz F23_CP05177_L003_R1_001.fastq.gz F23_CP05177_L003_R2_001.fastq.gz F24_CP05177_L003_R1_001.fastq.gz F24_CP05177_L003_R2_001.fastq.gz F25_CP05177_L002_R1_001.fastq.gz F25_CP05177_L002_R2_001.fastq.gz F26_CP05177_L003_R1_001.fastq.gz F26_CP05177_L003_R2_001.fastq.gz F27_CP05177_L003_R1_001.fastq.gz F27_CP05177_L003_R2_001.fastq.gz F28_CP05177_L002_R1_001.fastq.gz F28_CP05177_L002_R2_001.fastq.gz F29_CP05177_L002_R1_001.fastq.gz F29_CP05177_L002_R2_001.fastq.gz F30_CP05177_L001_R1_001.fastq.gz F30_CP05177_L001_R2_001.fastq.gz F30_CP05177_L002_R1_001.fastq.gz F30_CP05177_L002_R2_001.fastq.gz
+do
+    echo "File: $file"
+    gunzip -c $file | wc -l | awk '{d=$1; print d/4;}'
+done
+
+
+nano count_reads.sh
+(new_env) [ac267@login001 emodin]$ chmod +x count_reads.sh
+(new_env) [ac267@login001 emodin]$ ./count_reads.sh
+
+File: F16_CP05177_L003_R1_001.fastq.gz
+2552636
+File: F16_CP05177_L003_R2_001.fastq.gz
+2552636
+File: F17_CP05177_L003_R1_001.fastq.gz
+1415361
+File: F17_CP05177_L003_R2_001.fastq.gz
+1415361
+File: F18_CP05177_L003_R1_001.fastq.gz
+961224
+File: F18_CP05177_L003_R2_001.fastq.gz
+961224
+File: F19_ab_CP05177_R1_001.fastq.gz
+744403
+File: F19_ab_CP05177_R2_001.fastq.gz
+744403
+File: F20_CP05177_L003_R1_001.fastq.gz
+831438
+File: F20_CP05177_L003_R2_001.fastq.gz
+831438
+File: F21_CP05177_L002_R1_001.fastq.gz
+417589
+File: F21_CP05177_L002_R2_001.fastq.gz
+417589
+File: F22_CP05177_L003_R1_001.fastq.gz
+1052175
+File: F22_CP05177_L003_R2_001.fastq.gz
+1052175
+File: F23_CP05177_L003_R1_001.fastq.gz
+1140895
+File: F23_CP05177_L003_R2_001.fastq.gz
+1140895
+File: F24_CP05177_L003_R1_001.fastq.gz
+954896
+File: F24_CP05177_L003_R2_001.fastq.gz
+954896
+File: F25_CP05177_L002_R1_001.fastq.gz
+1122756
+File: F25_CP05177_L002_R2_001.fastq.gz
+1122756
+File: F26_CP05177_L003_R1_001.fastq.gz
+1309842
+File: F26_CP05177_L003_R2_001.fastq.gz
+1309842
+File: F27_CP05177_L003_R1_001.fastq.gz
+1147950
+File: F27_CP05177_L003_R2_001.fastq.gz
+1147950
+File: F28_CP05177_L002_R1_001.fastq.gz
+515280
+File: F28_CP05177_L002_R2_001.fastq.gz
+515280
+File: F29_CP05177_L002_R1_001.fastq.gz
+524534
+File: F29_CP05177_L002_R2_001.fastq.gz
+524534
+File: F30_CP05177_L001_R1_001.fastq.gz
+1042323
+File: F30_CP05177_L001_R2_001.fastq.gz
+1042323
+File: F30_CP05177_L002_R1_001.fastq.gz
+1013057
+File: F30_CP05177_L002_R2_001.fastq.gz
+1013057
+
+#Find the species name of the species with taxid alone 
+#(Data analysis was done in excel and later used for fetching the required details using Python)
+
+import Bio
+from Bio import Entrez
+import time
+
+# Define the email to be used for Entrez
+Entrez.email = "your.email@example.com"
+
+# Function to get the species name for a taxonomic ID
+def get_species_name(taxid):
+    try:
+        handle = Entrez.efetch(db="taxonomy", id=taxid, retmode="xml")
+        record = Entrez.read(handle)
+        species_name = record[0]['ScientificName']
+        return {'Taxonomy ID': taxid, 'Species': species_name}
+    except Exception as e:
+        return {'Taxonomy ID': taxid, 'Species': None, 'Error': str(e)}
+
+# Function to retrieve species names for a list of taxonomic IDs
+def get_species_names(taxid_list):
+    species_names = []
+    for taxid in taxid_list:
+        species_names.append(get_species_name(taxid))
+        time.sleep(1)  # Add a delay between requests to avoid hitting rate limits
+    return species_names
+
+# Example usage
+taxid_list = [5158, 40412, 2082, 41484, 21443, 35952, 40345, 43438, 41518, 42247, 43754, 21449, 40326, 6588, 40803, 40289, 41555, 41635, 41503, 45230, 41655, 41718, 41597, 43523, 41566, 41704, 40878, 45228, 42317, 41435, 41678, 63186, 43519, 40196, 40184, 2113, 21440, 41013, 43531, 41625, 35575, 41459, 41671, 59511, 39781, 102608, 41485, 40789, 43262, 43452, 45255, 40983, 43514, 40998, 41624, 43525, 41712, 40889, 40359, 35950, 43248, 40327, 43006, 41561, 40979, 40283, 40991, 102185, 46611, 41465, 41542, 39774, 41666, 41662, 44477, 41437, 45253, 40890, 63218, 42338, 35935, 43268, 43072, 40793, 43067, 43538, 40070, 43552, 44380, 59797, 41245, 40791, 59498, 44712, 40192, 43508, 40300, 44768, 40880, 41665, 39777, 40186, 43809, 41580, 100837, 41650, 59512, 43252, 41498, 41725, 41721, 40984, 41531, 63208, 41723, 102341, 21428, 40203, 41443, 44264, 41000, 41535, 102295, 44462, 41656, 102297, 41536, 43074, 40974, 39772, 43533, 63216, 41637, 43513]
+species_names = get_species_names(taxid_list)
+
+for species_info in species_names:
+    print(species_info)
+
+{'Taxonomy ID': 5158, 'Species': 'Ceratocystis fimbriata'}
+{'Taxonomy ID': 40412, 'Species': 'Chrysosporium sp.'}
+{'Taxonomy ID': 2082, 'Species': 'Syntrophomonas bryantii'}
+{'Taxonomy ID': 41484, 'Species': 'Atractylis humilis'}
+{'Taxonomy ID': 21443, 'Species': None, 'Error': 'list index out of range'}
+{'Taxonomy ID': 35952, 'Species': 'Aeonium nobile'}
+{'Taxonomy ID': 40345, 'Species': 'Strongylus'}
+{'Taxonomy ID': 43438, 'Species': 'Wilcoxina alaskana'}
+{'Taxonomy ID': 41518, 'Species': 'Salmonella enterica subsp. salamae serovar 42:f,g,t:--'}
+{'Taxonomy ID': 42247, 'Species': 'unidentified diatom endosymbiont of Peridinium foliaceum'}
+{'Taxonomy ID': 43754, 'Species': 'Muscoidea'}
+{'Taxonomy ID': 21449, 'Species': None, 'Error': 'list index out of range'}
+{'Taxonomy ID': 40326, 'Species': 'Plasmid pSW500'}
+{'Taxonomy ID': 6588, 'Species': 'Vesicomyidae'}
+{'Taxonomy ID': 40803, 'Species': 'blood disease bacterium R223'}
+{'Taxonomy ID': 40289, 'Species': 'Tuberaceae'}
+{'Taxonomy ID': 41555, 'Species': 'Cosmos'}
+{'Taxonomy ID': 41635, 'Species': 'Klasea nudicaulis'}
+{'Taxonomy ID': 41503, 'Species': 'Centaurea'}
+{'Taxonomy ID': 45230, 'Species': 'Balansia henningsiana'}
+{'Taxonomy ID': 41655, 'Species': 'Trixis californica'}
+{'Taxonomy ID': 41718, 'Species': 'Warcupiella spinulosa'}
+{'Taxonomy ID': 41597, 'Species': 'Liabum'}
+{'Taxonomy ID': 43523, 'Species': 'Mussaenda'}
+{'Taxonomy ID': 41566, 'Species': 'Dasyphyllum argenteum'}
+{'Taxonomy ID': 41704, 'Species': 'Riptortus clavatus'}
+{'Taxonomy ID': 40878, 'Species': 'unidentified eubacterium clone PS#27'}
+{'Taxonomy ID': 45228, 'Species': 'Heterogastridium pycnidioideum'}
+{'Taxonomy ID': 42317, 'Species': 'Ithomia sp.'}
+{'Taxonomy ID': 41435, 'Species': 'Cloning vector pACT2'}
+{'Taxonomy ID': 41678, 'Species': 'Turkey adenovirus 3'}
+{'Taxonomy ID': 63186, 'Species': 'Zobellia galactanivorans'}
+{'Taxonomy ID': 43519, 'Species': 'Mitriostigma'}
+{'Taxonomy ID': 40196, 'Species': 'Tylochromis leonensis'}
+{'Taxonomy ID': 40184, 'Species': 'Haplochromis pyrrhocephalus'}
+{'Taxonomy ID': 2113, 'Species': 'Mycoplasmopsis californica'}
+{'Taxonomy ID': 21440, 'Species': None, 'Error': 'list index out of range'}
+{'Taxonomy ID': 41013, 'Species': 'Tinea'}
+{'Taxonomy ID': 43531, 'Species': 'Neobatrachus pelobatoides'}
+{'Taxonomy ID': 41625, 'Species': 'Psilostrophe'}
+{'Taxonomy ID': 35575, 'Species': 'Mchenga conophoros'}
+{'Taxonomy ID': 41459, 'Species': 'Sweet potato mild mottle virus'}
+{'Taxonomy ID': 41671, 'Species': 'Lasaeidae'}
+{'Taxonomy ID': 59511, 'Species': 'Pseudomonas syringae pv. maculicola'}
+{'Taxonomy ID': 39781, 'Species': 'unclassified Cystoviridae'}
+{'Taxonomy ID': 102608, 'Species': 'Helicobacter pylori F32'}
+{'Taxonomy ID': 41485, 'Species': 'Atractylodes'}
+{'Taxonomy ID': 40789, 'Species': 'Suksdorfia'}
+{'Taxonomy ID': 43262, 'Species': 'Bacillus thuringiensis serovar neoleonensis'}
+{'Taxonomy ID': 43452, 'Species': 'Catesbaea spinosa'}
+{'Taxonomy ID': 45255, 'Species': 'GB virus C'}
+{'Taxonomy ID': 40983, 'Species': 'Geobacter hydrogenophilus'}
+{'Taxonomy ID': 43514, 'Species': 'Mantella aurantiaca'}
+{'Taxonomy ID': 40998, 'Species': 'Elsinoe australis'}
+{'Taxonomy ID': 41624, 'Species': 'Pluchea sericea'}
+{'Taxonomy ID': 43525, 'Species': 'Nauclea'}
+{'Taxonomy ID': 41712, 'Species': 'Osteoglossiformes'}
+{'Taxonomy ID': 40889, 'Species': 'unidentified eubacterium clone ESH7-4'}
+{'Taxonomy ID': 40359, 'Species': 'Lactococcus phage bIL66'}
+{'Taxonomy ID': 35950, 'Species': 'Aeonium haworthii'}
+{'Taxonomy ID': 43248, 'Species': 'Cloning vector pHUKH1'}
+{'Taxonomy ID': 40327, 'Species': 'Obertrumia'}
+{'Taxonomy ID': 43006, 'Species': 'unidentified eubacterium 59R6'}
+{'Taxonomy ID': 41561, 'Species': 'Cynara humilis'}
+{'Taxonomy ID': 40979, 'Species': 'Cocksfoot mottle virus'}
+{'Taxonomy ID': 40283, 'Species': 'unclassified Leishmania'}
+{'Taxonomy ID': 40991, 'Species': 'Thiomonas thermosulfata'}
+{'Taxonomy ID': 102185, 'Species': 'Elgaria kingii'}
+{'Taxonomy ID': 46611, 'Species': 'Abies grandis'}
+{'Taxonomy ID': 41465, 'Species': 'Acroptilon'}
+{'Taxonomy ID': 41542, 'Species': 'Cephalonoplos'}
+{'Taxonomy ID': 39774, 'Species': 'Methylomicrobium agile'}
+{'Taxonomy ID': 41666, 'Species': 'Batrachia'}
+{'Taxonomy ID': 41662, 'Species': 'Volutaria'}
+{'Taxonomy ID': 44477, 'Species': 'Apis mellifera mellifera'}
+{'Taxonomy ID': 41437, 'Species': 'Astigmata'}
+{'Taxonomy ID': 45253, 'Species': 'unclassified Bacteroidaceae'}
+{'Taxonomy ID': 40890, 'Species': 'Torilis'}
+{'Taxonomy ID': 63218, 'Species': 'Pseudopestalotiopsis elaeidis'}
+{'Taxonomy ID': 42338, 'Species': 'Pseudoregma panicola'}
+{'Taxonomy ID': 35935, 'Species': 'Parthenium argentatum'}
+{'Taxonomy ID': 43268, 'Species': 'Hubbardiidae'}
+{'Taxonomy ID': 43072, 'Species': None, 'Error': 'list index out of range'}
+{'Taxonomy ID': 40793, 'Species': 'Lithophragma affine'}
+{'Taxonomy ID': 43067, 'Species': 'Aralia chinensis'}
+{'Taxonomy ID': 43538, 'Species': 'Parapentas'}
+{'Taxonomy ID': 40070, 'Species': 'unclassified Chordopoxvirinae'}
+{'Taxonomy ID': 43552, 'Species': 'Pinckneya'}
+{'Taxonomy ID': 44380, 'Species': 'Ophiostoma macrosporum'}
+{'Taxonomy ID': 59797, 'Species': 'Amphora coffeiformis'}
+{'Taxonomy ID': 41245, 'Species': 'Spinulosacea'}
+{'Taxonomy ID': 40791, 'Species': 'Suksdorfia violacea'}
+{'Taxonomy ID': 59498, 'Species': 'Rubus rosifolius'}
+{'Taxonomy ID': 44712, 'Species': None, 'Error': 'list index out of range'}
+{'Taxonomy ID': 40192, 'Species': 'Oreochromis pangani'}
+{'Taxonomy ID': 43508, 'Species': 'Leiopelma hamiltoni'}
+{'Taxonomy ID': 40300, 'Species': 'Nosema sp.'}
+{'Taxonomy ID': 44768, 'Species': 'unclassified Chloroflexaceae'}
+{'Taxonomy ID': 40880, 'Species': 'Myrrhis odorata'}
+{'Taxonomy ID': 41665, 'Species': 'Neopterygii'}
+{'Taxonomy ID': 39777, 'Species': 'Veillonella atypica'}
+{'Taxonomy ID': 40186, 'Species': 'Haplochromis velifer'}
+{'Taxonomy ID': 43809, 'Species': 'Podonominae'}
+{'Taxonomy ID': 41580, 'Species': 'Galactites duriaei'}
+{'Taxonomy ID': 100837, 'Species': 'Influenza A virus (A/Chicken/Hong Kong/786/97 (H5N1))'}
+{'Taxonomy ID': 41650, 'Species': 'Tarchonanthus camphoratus'}
+{'Taxonomy ID': 59512, 'Species': 'Planktothrix rubescens'}
+{'Taxonomy ID': 43252, 'Species': 'Orothamnus'}
+{'Taxonomy ID': 41498, 'Species': 'Carthamus mitissimus'}
+{'Taxonomy ID': 41725, 'Species': 'Aspergillus aurantiobrunneus'}
+{'Taxonomy ID': 41721, 'Species': 'Sclerocleista ornata'}
+{'Taxonomy ID': 40984, 'Species': 'Gonyaulacales'}
+{'Taxonomy ID': 41531, 'Species': 'Centaurea diluta'}
+{'Taxonomy ID': 63208, 'Species': 'Apioclypea livistonae'}
+{'Taxonomy ID': 41723, 'Species': 'Aspergillus raperi'}
+{'Taxonomy ID': 102341, 'Species': 'uncultured bacterium BMS1-25'}
+{'Taxonomy ID': 21428, 'Species': None, 'Error': 'list index out of range'}
+{'Taxonomy ID': 40203, 'Species': 'Melozone albicollis'}
+{'Taxonomy ID': 41443, 'Species': 'Tyrophagus'}
+{'Taxonomy ID': 44264, 'Species': 'Chinese lamb rotavirus'}
+{'Taxonomy ID': 41000, 'Species': 'Ramularia scabiosae'}
+{'Taxonomy ID': 41535, 'Species': 'Centaurea macrocephala'}
+{'Taxonomy ID': 102295, 'Species': 'Brachidontes variabilis'}
+{'Taxonomy ID': 44462, 'Species': 'Coccoid pelagophyte CCMP1395'}
+{'Taxonomy ID': 41656, 'Species': 'Ursinia'}
+{'Taxonomy ID': 102297, 'Species': 'Cardiolucina semperiana'}
+{'Taxonomy ID': 41536, 'Species': 'Centaurea melitensis'}
+{'Taxonomy ID': 43074, 'Species': 'Prionitis lanceolata gall symbiont'}
+{'Taxonomy ID': 40974, 'Species': 'Pellaea boivinii'}
+{'Taxonomy ID': 39772, 'Species': 'Methylomonas fodinarum'}
+{'Taxonomy ID': 43533, 'Species': 'Nertera'}
+{'Taxonomy ID': 63216, 'Species': 'Myelosperma tumidum'}
+{'Taxonomy ID': 41637, 'Species': 'Sinclairia pringlei'}
+{'Taxonomy ID': 43513, 'Species': 'Mantella'}
+
+#bacterium _1xD42, bacterium _0, bacterium _1xD8 were removed due to unclear classification
+
+
+#Find the taxonomic id of the species with species name alone 
+
+from Bio import Entrez
+import time
+
+# Define the email to be used for Entrez
+Entrez.email = "your.email@example.com"
+
+# Function to get the taxonomic ID for a species
+def get_taxid(species):
+    try:
+        handle = Entrez.esearch(term=species, db="taxonomy", retmode="xml")
+        record = Entrez.read(handle)
+        if record['Count'] == '0':
+            return {'Species': species, 'Taxonomy ID': None}
+        taxid = record['IdList'][0]
+        return {'Species': species, 'Taxonomy ID': taxid}
+    except Exception as e:
+        return {'Species': species, 'Taxonomy ID': None, 'Error': str(e)}
+
+# Function to retrieve taxonomic IDs for a list of species
+def get_taxids(species_list):
+    taxids = []
+    for species in species_list:
+        taxids.append(get_taxid(species))
+        time.sleep(1)  # Add a delay between requests to avoid hitting rate limits
+    return taxids
+
+# Example usage
+species_list = [ 'Bacteroidales _bacterium', 'Lachnospiraceae _bacterium', 'Lachnospiraceae _bacterium', 'Prevotella _sp', 'Phocaeicola _sartorii', 'Ligilactobacillus _murinus', 'Muribaculaceae _bacterium', 'Helicobacter _apodemus', 'Turicibacter _sp', 'Eubacteriaceae _bacterium', 'Helicobacter _typhlonius', 'Anaerotruncus _sp', 'Duncaniella _muris', 'Helicobacter _hepaticus', 'bacterium _1xD42', 'bacterium _1XD42', 'Muribaculaceae _bacterium', 'Mucispirillum _schaedleri', 'Muribaculum _gordoncarteri', 'Paramuribaculum _intestinale', 'Phocaeicola _vulgatus', 'Oscillospiraceae _bacterium', 'Burkholderiaceae _bacterium', 'Clostridia _bacterium', 'Clostridiaceae _bacterium', 'Oscillospiraceae _unclassified', 'Parabacteroides _distasonis', 'Muribaculaceae _bacterium', 'Parabacteroides _SGB40800', 'Lachnospiraceae _bacterium', 'Acetatifactor _sp', 'bacterium _1xD42', 'Desulfovibrionaceae _bacterium', 'Lactobacillus _johnsonii', 'Adlercreutzia _sp', 'Muribaculum _intestinale', 'Neglectibacter _sp', 'Bacteria _unclassified', 'Bifidobacterium _pseudolongum', 'bacterium _1XD42', 'Oscillibacter _SGB43496', 'Lachnospiraceae _bacterium', 'Bacteria _unclassified', 'bacterium _1xD8', 'Adlercreutzia _mucosicola', 'Adlercreutzia _caecimuris', 'Streptococcus _danieliae', 'Oscillospiraceae _unclassified', 'Limosilactobacillus _reuteri', 'Alistipes _sp', 'Oscillospiraceae _unclassified', 'Bacteria _unclassified', 'Bacteroidales _unclassified', 'Clostridiaceae _unclassified', 'Lactobacillus _intestinalis', 'Erysipelotrichaceae _bacterium', 'Granulimonas _faecalis', 'Clostridia _unclassified', 'Bacteroides_acidifaciens', 'Bacteroides_muris', 'Duncaniella_freteri', 'Adlercreutzia_sp', 'Acutalibacter_muris', 'Elsinoe australis', 'Pluchea sericea', 'Nauclea', 'Osteoglossiformes', 'unidentified eubacterium clone ESH7-4', 'Lactococcus phage bIL66', 'Aeonium haworthii', 'Cloning vector pHUKH1', 'Obertrumia', 'unidentified eubacterium 59R6', 'Cynara humilis', 'Cocksfoot mottle virus', 'unclassified Leishmania', 'Thiomonas thermosulfata', 'Elgaria kingii', 'Abies grandis', 'Acroptilon', 'Cephalonoplos', 'Methylomicrobium agile', 'Batrachia', 'Volutaria', 'Apis mellifera mellifera', 'Astigmata', 'unclassified Bacteroidaceae', 'Torilis', 'Pseudopestalotiopsis elaeidis', 'Pseudoregma panicola', 'Parthenium argentatum', 'Hubbardiidae', 'Lithophragma affine', 'Aralia chinensis', 'Parapentas', 'unclassified Chordopoxvirinae', 'Pinckneya', 'Ophiostoma macrosporum', 'Amphora coffeiformis', 'Spinulosacea', 'Suksdorfia violacea', 'Rubus rosifolius', 'Oreochromis pangani', 'Leiopelma hamiltoni', 'Nosema sp.', 'unclassified Chloroflexaceae', 'Myrrhis odorata', 'Neopterygii', 'Veillonella atypica', 'Haplochromis velifer', 'Podonominae', 'Galactites duriaei', 'Influenza A virus (A/Chicken/Hong Kong/786/97 (H5N1))', 'Tarchonanthus camphoratus', 'Planktothrix rubescens', 'Orothamnus', 'Carthamus mitissimus', 'Aspergillus aurantiobrunneus', 'Sclerocleista ornata', 'Gonyaulacales', 'Centaurea diluta', 'Apioclypea livistonae', 'Aspergillus raperi', 'uncultured bacterium BMS1-25', 'Melozone albicollis', 'Tyrophagus', 'Chinese lamb rotavirus', 'Ramularia scabiosae', 'Centaurea macrocephala', 'Brachidontes variabilis', 'Coccoid pelagophyte CCMP1395', 'Ursinia', 'Cardiolucina semperiana', 'Centaurea melitensis', 'Prionitis lanceolata gall symbiont', 'Pellaea boivinii', 'Methylomonas fodinarum', 'Nertera', 'Myelosperma tumidum', 'Sinclairia pringlei', 'Mantella']
+taxids = get_taxids(species_list)
+
+for taxid_info in taxids:
+    print(taxid_info)
+
+{'Species': 'Bacteroidales _bacterium', 'Taxonomy ID': '2030927'}
+{'Species': 'Lachnospiraceae _bacterium', 'Taxonomy ID': '1898203'}
+{'Species': 'Lachnospiraceae _bacterium', 'Taxonomy ID': '1898203'}
+{'Species': 'Prevotella _sp', 'Taxonomy ID': '59823'}
+{'Species': 'Phocaeicola _sartorii', 'Taxonomy ID': '671267'}
+{'Species': 'Ligilactobacillus _murinus', 'Taxonomy ID': '1622'}
+{'Species': 'Muribaculaceae _bacterium', 'Taxonomy ID': '2498093'}
+{'Species': 'Helicobacter _apodemus', 'Taxonomy ID': '135569'}
+{'Species': 'Turicibacter _sp', 'Taxonomy ID': '2049042'}
+{'Species': 'Eubacteriaceae _bacterium', 'Taxonomy ID': '2049045'}
+{'Species': 'Helicobacter _typhlonius', 'Taxonomy ID': '76936'}
+{'Species': 'Anaerotruncus _sp', 'Taxonomy ID': '1872531'}
+{'Species': 'Duncaniella _muris', 'Taxonomy ID': '2094150'}
+{'Species': 'Helicobacter _hepaticus', 'Taxonomy ID': '32025'}
+{'Species': 'bacterium _1xD42', 'Taxonomy ID': None}
+{'Species': 'bacterium _1XD42', 'Taxonomy ID': None}
+{'Species': 'Muribaculaceae _bacterium', 'Taxonomy ID': '2498093'}
+{'Species': 'Mucispirillum _schaedleri', 'Taxonomy ID': '248039'}
+{'Species': 'Muribaculum _gordoncarteri', 'Taxonomy ID': '2530390'}
+{'Species': 'Paramuribaculum _intestinale', 'Taxonomy ID': '2094151'}
+{'Species': 'Phocaeicola _vulgatus', 'Taxonomy ID': '821'}
+{'Species': 'Oscillospiraceae _bacterium', 'Taxonomy ID': '2485925'}
+{'Species': 'Burkholderiaceae _bacterium', 'Taxonomy ID': '2030806'}
+{'Species': 'Clostridia _bacterium', 'Taxonomy ID': '2044939'}
+{'Species': 'Clostridiaceae _bacterium', 'Taxonomy ID': '1898204'}
+{'Species': 'Oscillospiraceae _unclassified', 'Taxonomy ID': '12908'}
+{'Species': 'Parabacteroides _distasonis', 'Taxonomy ID': '823'}
+{'Species': 'Muribaculaceae _bacterium', 'Taxonomy ID': '2498093'}
+{'Species': 'Parabacteroides _SGB40800', 'Taxonomy ID': None}
+{'Species': 'Lachnospiraceae _bacterium', 'Taxonomy ID': '1898203'}
+{'Species': 'Acetatifactor _sp', 'Taxonomy ID': '1872090'}
+{'Species': 'bacterium _1xD42', 'Taxonomy ID': None}
+{'Species': 'Desulfovibrionaceae _bacterium', 'Taxonomy ID': '2049043'}
+{'Species': 'Lactobacillus _johnsonii', 'Taxonomy ID': '33959'}
+{'Species': 'Adlercreutzia _sp', 'Taxonomy ID': '1872387'}
+{'Species': 'Muribaculum _intestinale', 'Taxonomy ID': '1796646'}
+{'Species': 'Neglectibacter _sp', 'Taxonomy ID': '1924106'}
+{'Species': 'Bacteria _unclassified', 'Taxonomy ID': '12908'}
+{'Species': 'Bifidobacterium _pseudolongum', 'Taxonomy ID': '1694'}
+{'Species': 'bacterium _1XD42', 'Taxonomy ID': None}
+{'Species': 'Oscillibacter _SGB43496', 'Taxonomy ID': None}
+{'Species': 'Lachnospiraceae _bacterium', 'Taxonomy ID': '1898203'}
+{'Species': 'Bacteria _unclassified', 'Taxonomy ID': '12908'}
+{'Species': 'bacterium _1xD8', 'Taxonomy ID': None}
+{'Species': 'Adlercreutzia _mucosicola', 'Taxonomy ID': '580026'}
+{'Species': 'Adlercreutzia _caecimuris', 'Taxonomy ID': '671266'}
+{'Species': 'Streptococcus _danieliae', 'Taxonomy ID': '747656'}
+{'Species': 'Oscillospiraceae _unclassified', 'Taxonomy ID': '12908'}
+{'Species': 'Limosilactobacillus _reuteri', 'Taxonomy ID': '1598'}
+{'Species': 'Alistipes _sp', 'Taxonomy ID': '1872444'}
+{'Species': 'Oscillospiraceae _unclassified', 'Taxonomy ID': '12908'}
+{'Species': 'Bacteria _unclassified', 'Taxonomy ID': '12908'}
+{'Species': 'Bacteroidales _unclassified', 'Taxonomy ID': '12908'}
+{'Species': 'Clostridiaceae _unclassified', 'Taxonomy ID': '12908'}
+{'Species': 'Lactobacillus _intestinalis', 'Taxonomy ID': '151781'}
+{'Species': 'Erysipelotrichaceae _bacterium', 'Taxonomy ID': '2049044'}
+{'Species': 'Granulimonas _faecalis', 'Taxonomy ID': '2894155'}
+{'Species': 'Clostridia _unclassified', 'Taxonomy ID': '12908'}
+
+{'Species': 'Bacteroides_acidifaciens', 'Taxonomy ID': '85831'}
+{'Species': 'Bacteroides_muris', 'Taxonomy ID': '2937417'}
+{'Species': 'Duncaniella_freteri', 'Taxonomy ID': '2530391'}
+{'Species': 'Adlercreutzia_sp', 'Taxonomy ID': '1872387'}
+{'Species': 'Acutalibacter_muris', 'Taxonomy ID': '1796620'}
+{'Species': 'Elsinoe australis', 'Taxonomy ID': '40998'}
+{'Species': 'Pluchea sericea', 'Taxonomy ID': '41624'}
+{'Species': 'Nauclea', 'Taxonomy ID': '43525'}
+{'Species': 'Osteoglossiformes', 'Taxonomy ID': '41712'}
+{'Species': 'unidentified eubacterium clone ESH7-4', 'Taxonomy ID': '40889'}
+{'Species': 'Lactococcus phage bIL66', 'Taxonomy ID': '213770'}
+{'Species': 'Aeonium haworthii', 'Taxonomy ID': '35950'}
+{'Species': 'Cloning vector pHUKH1', 'Taxonomy ID': '43248'}
+{'Species': 'Obertrumia', 'Taxonomy ID': '40327'}
+{'Species': 'unidentified eubacterium 59R6', 'Taxonomy ID': None}
+{'Species': 'Cynara humilis', 'Taxonomy ID': '41561'}
+{'Species': 'Cocksfoot mottle virus', 'Taxonomy ID': '40979'}
+{'Species': 'unclassified Leishmania', 'Taxonomy ID': '40283'}
+{'Species': 'Thiomonas thermosulfata', 'Taxonomy ID': '40991'}
+{'Species': 'Elgaria kingii', 'Taxonomy ID': '102185'}
+{'Species': 'Abies grandis', 'Taxonomy ID': '46611'}
+{'Species': 'Acroptilon', 'Taxonomy ID': '41465'}
+{'Species': 'Cephalonoplos', 'Taxonomy ID': '41542'}
+{'Species': 'Methylomicrobium agile', 'Taxonomy ID': '39774'}
+{'Species': 'Batrachia', 'Taxonomy ID': '41666'}
+{'Species': 'Volutaria', 'Taxonomy ID': '41662'}
+{'Species': 'Apis mellifera mellifera', 'Taxonomy ID': '44477'}
+{'Species': 'Astigmata', 'Taxonomy ID': '6951'}
+{'Species': 'unclassified Bacteroidaceae', 'Taxonomy ID': '45253'}
+{'Species': 'Torilis', 'Taxonomy ID': '40890'}
+{'Species': 'Pseudopestalotiopsis elaeidis', 'Taxonomy ID': '63218'}
+{'Species': 'Pseudoregma panicola', 'Taxonomy ID': '42338'}
+{'Species': 'Parthenium argentatum', 'Taxonomy ID': '35935'}
+{'Species': 'Hubbardiidae', 'Taxonomy ID': '483291'}
+{'Species': 'Lithophragma affine', 'Taxonomy ID': '40793'}
+{'Species': 'Aralia chinensis', 'Taxonomy ID': '43067'}
+{'Species': 'Parapentas', 'Taxonomy ID': '43538'}
+{'Species': 'unclassified Chordopoxvirinae', 'Taxonomy ID': '40070'}
+{'Species': 'Pinckneya', 'Taxonomy ID': '43552'}
+{'Species': 'Ophiostoma macrosporum', 'Taxonomy ID': '1892474'}
+{'Species': 'Amphora coffeiformis', 'Taxonomy ID': '265554'}
+{'Species': 'Spinulosacea', 'Taxonomy ID': '41245'}
+{'Species': 'Suksdorfia violacea', 'Taxonomy ID': '40791'}
+{'Species': 'Rubus rosifolius', 'Taxonomy ID': '59498'}
+{'Species': 'Oreochromis pangani', 'Taxonomy ID': '40192'}
+{'Species': 'Leiopelma hamiltoni', 'Taxonomy ID': '43508'}
+{'Species': 'Nosema sp.', 'Taxonomy ID': '40300'}
+{'Species': 'unclassified Chloroflexaceae', 'Taxonomy ID': '44768'}
+{'Species': 'Myrrhis odorata', 'Taxonomy ID': '40880'}
+{'Species': 'Neopterygii', 'Taxonomy ID': '41665'}
+{'Species': 'Veillonella atypica', 'Taxonomy ID': '39777'}
+{'Species': 'Haplochromis velifer', 'Taxonomy ID': '120192'}
+{'Species': 'Podonominae', 'Taxonomy ID': '43809'}
+{'Species': 'Galactites duriaei', 'Taxonomy ID': '41580'}
+{'Species': 'Influenza A virus (A/Chicken/Hong Kong/786/97 (H5N1))', 'Taxonomy ID': None}
+{'Species': 'Tarchonanthus camphoratus', 'Taxonomy ID': '41650'}
+{'Species': 'Planktothrix rubescens', 'Taxonomy ID': '59512'}
+{'Species': 'Orothamnus', 'Taxonomy ID': '43252'}
+{'Species': 'Carthamus mitissimus', 'Taxonomy ID': '41498'}
+{'Species': 'Aspergillus aurantiobrunneus', 'Taxonomy ID': '41725'}
+{'Species': 'Sclerocleista ornata', 'Taxonomy ID': '41721'}
+{'Species': 'Gonyaulacales', 'Taxonomy ID': '40984'}
+{'Species': 'Centaurea diluta', 'Taxonomy ID': '41531'}
+{'Species': 'Apioclypea livistonae', 'Taxonomy ID': None}
+{'Species': 'Aspergillus raperi', 'Taxonomy ID': '41723'}
+{'Species': 'uncultured bacterium BMS1-25', 'Taxonomy ID': '102341'}
+{'Species': 'Melozone albicollis', 'Taxonomy ID': '40203'}
+{'Species': 'Tyrophagus', 'Taxonomy ID': '41443'}
+{'Species': 'Chinese lamb rotavirus', 'Taxonomy ID': '28326'}
+{'Species': 'Ramularia scabiosae', 'Taxonomy ID': None}
+{'Species': 'Centaurea macrocephala', 'Taxonomy ID': '41535'}
+{'Species': 'Brachidontes variabilis', 'Taxonomy ID': '102295'}
+{'Species': 'Coccoid pelagophyte CCMP1395', 'Taxonomy ID': '44462'}
+{'Species': 'Ursinia', 'Taxonomy ID': '41656'}
+{'Species': 'Cardiolucina semperiana', 'Taxonomy ID': '102297'}
+{'Species': 'Centaurea melitensis', 'Taxonomy ID': '41536'}
+{'Species': 'Prionitis lanceolata gall symbiont', 'Taxonomy ID': '43074'}
+{'Species': 'Pellaea boivinii', 'Taxonomy ID': '40974'}
+{'Species': 'Methylomonas fodinarum', 'Taxonomy ID': '39772'}
+{'Species': 'Nertera', 'Taxonomy ID': '43533'}
+{'Species': 'Myelosperma tumidum', 'Taxonomy ID': None}
+{'Species': 'Sinclairia pringlei', 'Taxonomy ID': '41637'}
+{'Species': 'Mantella', 'Taxonomy ID': '43513'}
+
+
+
+#Python code for finding lineage:
+
+from Bio import Entrez
+import time
+
+# Define the email to be used for Entrez
+Entrez.email = "your.email@example.com"
+
+# Function to get the taxonomic information for a species
+def get_taxonomic_info(species):
+    try:
+        handle = Entrez.esearch(term=species, db="taxonomy", retmode="xml")
+        record = Entrez.read(handle)
+        if record['Count'] == '0':
+            return {'Species': species, 'Kingdom': None, 'Phylum': None, 'Class': None,
+                    'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None}
+        taxid = record['IdList'][0]
+        handle = Entrez.efetch(db="taxonomy", id=taxid, retmode="xml")
+        taxonomy_record = Entrez.read(handle)[0]
+        tax_info = {
+            'Species': species,
+            'Kingdom': taxonomy_record.get('LineageEx', [{'Rank': 'no rank', 'ScientificName': 'Unknown'}])[1]['ScientificName'],
+            'Phylum': taxonomy_record.get('LineageEx', [{'Rank': 'no rank', 'ScientificName': 'Unknown'}])[2]['ScientificName'],
+            'Class': taxonomy_record.get('LineageEx', [{'Rank': 'no rank', 'ScientificName': 'Unknown'}])[3]['ScientificName'],
+            'Order': taxonomy_record.get('LineageEx', [{'Rank': 'no rank', 'ScientificName': 'Unknown'}])[4]['ScientificName'],
+            'Family': taxonomy_record.get('LineageEx', [{'Rank': 'no rank', 'ScientificName': 'Unknown'}])[5]['ScientificName'],
+            'Genus': taxonomy_record.get('LineageEx', [{'Rank': 'no rank', 'ScientificName': 'Unknown'}])[6]['ScientificName'],
+            'SpeciesName': taxonomy_record['ScientificName']
+        }
+        return tax_info
+    except Exception as e:
+        return {'Species': species, 'Kingdom': None, 'Phylum': None, 'Class': None,
+                'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None, 'Error': str(e)}
+
+# Function to retrieve taxonomic information for a list of species
+def get_taxonomic_infos(species_list):
+    taxonomic_infos = []
+    for species in species_list:
+        taxonomic_infos.append(get_taxonomic_info(species))
+        time.sleep(1)  # Add a delay between requests to avoid hitting rate limits
+    return taxonomic_infos
+
+# Example usage
+species_list = [
+    "Bacteroidales_bacterium",
+    "Lachnospiraceae_bacterium",
+    "Lachnospiraceae_bacterium_MD335",
+    "Prevotella_sp_MGM1",
+    "Phocaeicola_sartorii",
+    "Ligilactobacillus_murinus",
+    "Muribaculaceae_bacterium",
+    "Helicobacter_apodemus",
+    "Turicibacter_sp_1E2",
+    "Eubacteriaceae_bacterium",
+    "Helicobacter_typhlonius",
+    "Anaerotruncus_sp_1XD42_93",
+    "Duncaniella_muris",
+    "Helicobacter_hepaticus",
+    "Bacteroides_acidifaciens",
+    "Bacteroides_muris",
+    "Muribaculaceae_bacterium_Isolate_104_HZI",
+    "Mucispirillum_schaedleri",
+    "Muribaculum_gordoncarteri",
+    "Paramuribaculum_intestinale",
+    "Phocaeicola_vulgatus",
+    "Oscillospiraceae_bacterium",
+    "Burkholderiaceae_bacterium",
+    "Clostridia_bacterium",
+    "Clostridiaceae_bacterium",
+    "Parabacteroides_distasonis",
+    "Muribaculaceae_bacterium_Isolate_013_NCI",
+    "Lachnospiraceae_bacterium_MD308",
+    "Acetatifactor_sp_DSM_110981",
+    "Duncaniella_freteri",
+    "Desulfovibrionaceae_bacterium",
+    "Lactobacillus_johnsonii",
+    "Adlercreutzia_sp_DSM_112345",
+    "Muribaculum_intestinale",
+    "Neglectibacter_sp_X4",
+    "Bifidobacterium_pseudolongum",
+    "Adlercreutzia_sp_DSM_109821",
+    "Lachnospiraceae_bacterium_A2",
+    "Adlercreutzia_mucosicola",
+    "Adlercreutzia_caecimuris",
+    "Streptococcus_danieliae",
+    "Limosilactobacillus_reuteri",
+    "Alistipes_sp_DSM_112343",
+    "Lactobacillus_intestinalis",
+    "Erysipelotrichaceae_bacterium",
+    "Granulimonas_faecalis",
+    "Acutalibacter_muris",
+    "Ceratocystis fimbriata",
+    "Chrysosporium sp.",
+    "Syntrophomonas bryantii",
+    "Atractylis humilis",
+    "Aeonium nobile",
+    "Strongylus",
+    "Wilcoxina alaskana",
+    "Salmonella enterica subsp. salamae serovar 42:f,g,t:--",
+    "unidentified diatom endosymbiont of Peridinium foliaceum",
+    "Muscoidea",
+    "Plasmid pSW500",
+    "Vesicomyidae",
+    "blood disease bacterium R223",
+    "Tuberaceae",
+    "Cosmos",
+    "Klasea nudicaulis",
+    "Centaurea",
+    "Balansia henningsiana",
+    "Trixis californica",
+    "Warcupiella spinulosa",
+    "Liabum",
+    "Mussaenda",
+    "Dasyphyllum argenteum",
+    "Riptortus clavatus",
+    "unidentified eubacterium clone PS#27",
+    "Heterogastridium pycnidioideum",
+    "Ithomia sp.",
+    "Cloning vector pACT2",
+    "Turkey adenovirus 3",
+    "Zobellia galactanivorans",
+    "Mitriostigma",
+    "Tylochromis leonensis",
+    "Haplochromis pyrrhocephalus",
+    "Mycoplasmopsis californica",
+    "Tinea",
+    "Neobatrachus pelobatoides",
+    "Psilostrophe",
+    "Mchenga conophoros",
+    "Sweet potato mild mottle virus",
+    "Lasaeidae",
+    "Pseudomonas syringae pv. maculicola",
+    "unclassified Cystoviridae",
+    "Helicobacter pylori F32",
+    "Atractylodes",
+    "Suksdorfia",
+    "Bacillus thuringiensis serovar neoleonensis",
+    "Catesbaea spinosa",
+    "GB virus C",
+    "Geobacter hydrogenophilus",
+    "Mantella aurantiaca",
+    "Elsinoe australis",
+    "Pluchea sericea",
+    "Nauclea",
+    "Osteoglossiformes",
+    "unidentified eubacterium clone ESH7-4",
+    "Lactococcus phage bIL66",
+    "Aeonium haworthii",
+    "Cloning vector pHUKH1",
+    "Obertrumia",
+    "unidentified eubacterium 59R6",
+    "Cynara humilis",
+    "Cocksfoot mottle virus",
+    "unclassified Leishmania",
+    "Thiomonas thermosulfata",
+    "Elgaria kingii",
+    "Abies grandis",
+    "Acroptilon",
+    "Cephalonoplos",
+    "Methylomicrobium agile",
+    "Batrachia",
+    "Volutaria",
+    "Apis mellifera mellifera",
+    "Astigmata",
+    "unclassified Bacteroidaceae",
+    "Torilis",
+    "Pseudopestalotiopsis elaeidis",
+    "Pseudoregma panicola",
+    "Parthenium argentatum",
+    "Hubbardiidae",
+    "Lithophragma affine",
+    "Aralia chinensis",
+    "Parapentas",
+    "unclassified Chordopoxvirinae",
+    "Pinckneya",
+    "Ophiostoma macrosporum",
+    "Amphora coffeiformis",
+    "Spinulosacea",
+    "Suksdorfia violacea",
+    "Rubus rosifolius",
+    "Oreochromis pangani",
+    "Leiopelma hamiltoni",
+    "Nosema sp.",
+    "unclassified Chloroflexaceae",
+    "Myrrhis odorata",
+    "Neopterygii",
+    "Veillonella atypica",
+    "Haplochromis velifer",
+    "Podonominae",
+    "Galactites duriaei",
+    "Influenza A virus (A/Chicken/Hong Kong/786/97 (H5N1))",
+    "Tarchonanthus camphoratus",
+    "Planktothrix rubescens",
+    "Orothamnus",
+    "Carthamus mitissimus",
+    "Aspergillus aurantiobrunneus",
+    "Sclerocleista ornata",
+    "Gonyaulacales",
+    "Centaurea diluta",
+    "Apioclypea livistonae",
+    "Aspergillus raperi",
+    "uncultured bacterium BMS1-25",
+    "Melozone albicollis",
+    "Tyrophagus",
+    "Chinese lamb rotavirus",
+    "Ramularia scabiosae",
+    "Centaurea macrocephala",
+    "Brachidontes variabilis",
+    "Coccoid pelagophyte CCMP1395",
+    "Ursinia",
+    "Cardiolucina semperiana",
+    "Centaurea melitensis",
+    "Prionitis lanceolata gall symbiont",
+    "Pellaea boivinii",
+    "Methylomonas fodinarum",
+    "Nertera",
+    "Myelosperma tumidum",
+    "Sinclairia pringlei",
+    "Mantella"
+]
+
+taxonomic_infos = get_taxonomic_infos(species_list)
+
+for tax_info in taxonomic_infos:
+    print(tax_info)
+
+from tabulate import tabulate
+
+# Convert taxonomic_infos to a list of lists
+table_data = []
+for tax_info in taxonomic_infos:
+    table_data.append([
+        tax_info['Species'],
+        tax_info['Kingdom'],
+        tax_info['Phylum'],
+        tax_info['Class'],
+        tax_info['Order'],
+        tax_info['Family'],
+        tax_info['Genus'],
+        tax_info['SpeciesName']
+    ])
+
+# Define headers for the table
+headers = ["Species", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species Name"]
+
+# Generate the table
+table = tabulate(table_data, headers=headers, tablefmt="grid")
+
+# Print the table
+print(table)
+
+import pandas as pd
+
+# Convert taxonomic_infos to a DataFrame
+df = pd.DataFrame(table_data, columns=headers)
+
+# Define the path for the Excel file
+file_path = "/Users/cb_ash/Desktop/taxonomic_info.xlsx"
+
+# Export the DataFrame to an Excel file
+df.to_excel(file_path, index=False)
+
+print("Excel file exported successfully to:", file_path)
+
+{'Species': 'Haplochromis pyrrhocephalus', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Haplochromis pyrrhocephalus'}
+{'Species': 'Mycoplasmopsis californica', 'Kingdom': 'Bacteria', 'Phylum': 'Terrabacteria group', 'Class': 'Mycoplasmatota', 'Order': 'Mycoplasmoidales', 'Family': 'Metamycoplasmataceae', 'Genus': 'Mycoplasmopsis', 'SpeciesName': 'Mycoplasmopsis californica'}
+{'Species': 'Tinea', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Protostomia', 'SpeciesName': 'Tinea'}
+{'Species': 'Neobatrachus pelobatoides', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Neobatrachus pelobatoides'}
+{'Species': 'Psilostrophe', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Psilostrophe'}
+{'Species': 'Mchenga conophoros', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Mchenga conophoros'}
+{'Species': 'Sweet potato mild mottle virus', 'Kingdom': 'Riboviria', 'Phylum': 'Orthornavirae', 'Class': 'Pisuviricota', 'Order': 'Stelpaviricetes', 'Family': 'Patatavirales', 'Genus': 'Potyviridae', 'SpeciesName': 'Sweet potato mild mottle virus'}
+{'Species': 'Lasaeidae', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Protostomia', 'SpeciesName': 'Lasaeidae'}
+{'Species': 'Pseudomonas syringae pv. maculicola', 'Kingdom': 'Bacteria', 'Phylum': 'Pseudomonadota', 'Class': 'Gammaproteobacteria', 'Order': 'Pseudomonadales', 'Family': 'Pseudomonadaceae', 'Genus': 'Pseudomonas', 'SpeciesName': 'Pseudomonas syringae pv. maculicola'}
+{'Species': 'unclassified Cystoviridae', 'Kingdom': 'Riboviria', 'Phylum': 'Orthornavirae', 'Class': 'Duplornaviricota', 'Order': 'Vidaverviricetes', 'Family': 'Mindivirales', 'Genus': 'Cystoviridae', 'SpeciesName': 'unclassified Cystoviridae'}
+{'Species': 'Helicobacter pylori F32', 'Kingdom': 'Bacteria', 'Phylum': 'Campylobacterota', 'Class': 'Epsilonproteobacteria', 'Order': 'Campylobacterales', 'Family': 'Helicobacteraceae', 'Genus': 'Helicobacter', 'SpeciesName': 'Helicobacter pylori F32'}
+{'Species': 'Atractylodes', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Atractylodes'}
+{'Species': 'Suksdorfia', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Suksdorfia'}
+{'Species': 'Bacillus thuringiensis serovar neoleonensis', 'Kingdom': 'Bacteria', 'Phylum': 'Terrabacteria group', 'Class': 'Bacillota', 'Order': 'Bacilli', 'Family': 'Bacillales', 'Genus': 'Bacillaceae', 'SpeciesName': 'Bacillus thuringiensis serovar neoleonensis'}
+{'Species': 'Catesbaea spinosa', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Catesbaea spinosa'}
+{'Species': 'GB virus C', 'Kingdom': 'Riboviria', 'Phylum': 'Orthornavirae', 'Class': 'Kitrinoviricota', 'Order': 'Flasuviricetes', 'Family': 'Amarillovirales', 'Genus': 'Flaviviridae', 'SpeciesName': 'GB virus C'}
+{'Species': 'Geobacter hydrogenophilus', 'Kingdom': 'Bacteria', 'Phylum': 'Thermodesulfobacteriota', 'Class': 'Desulfuromonadia', 'Order': 'Geobacterales', 'Family': 'Geobacteraceae', 'Genus': 'Geobacter', 'SpeciesName': 'Geobacter hydrogenophilus'}
+{'Species': 'Mantella aurantiaca', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Mantella aurantiaca'}
+{'Species': 'Elsinoe australis', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Fungi', 'Order': 'Dikarya', 'Family': 'Ascomycota', 'Genus': 'saccharomyceta', 'SpeciesName': 'Elsinoe australis'}
+{'Species': 'Pluchea sericea', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Pluchea sericea'}
+{'Species': 'Nauclea', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Nauclea'}
+{'Species': 'Osteoglossiformes', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Osteoglossiformes'}
+{'Species': 'unidentified eubacterium clone ESH7-4', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None, 'Error': 'list index out of range'}
+{'Species': 'Lactococcus phage bIL66', 'Kingdom': 'Duplodnaviria', 'Phylum': 'Heunggongvirae', 'Class': 'Uroviricota', 'Order': 'Caudoviricetes', 'Family': 'Skunavirus', 'Genus': 'unclassified Skunavirus', 'SpeciesName': 'Lactococcus phage bIL66'}
+{'Species': 'Aeonium haworthii', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Aeonium haworthii'}
+{'Species': 'Cloning vector pHUKH1', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None, 'Error': 'list index out of range'}
+{'Species': 'Obertrumia', 'Kingdom': 'Eukaryota', 'Phylum': 'Sar', 'Class': 'Alveolata', 'Order': 'Ciliophora', 'Family': 'Intramacronucleata', 'Genus': 'Nassophorea', 'SpeciesName': 'Obertrumia'}
+{'Species': 'unidentified eubacterium 59R6', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None}
+{'Species': 'Cynara humilis', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Cynara humilis'}
+{'Species': 'Cocksfoot mottle virus', 'Kingdom': 'Riboviria', 'Phylum': 'Orthornavirae', 'Class': 'Pisuviricota', 'Order': 'Pisoniviricetes', 'Family': 'Sobelivirales', 'Genus': 'Solemoviridae', 'SpeciesName': 'Cocksfoot mottle virus'}
+{'Species': 'unclassified Leishmania', 'Kingdom': 'Eukaryota', 'Phylum': 'Discoba', 'Class': 'Euglenozoa', 'Order': 'Kinetoplastea', 'Family': 'Metakinetoplastina', 'Genus': 'Trypanosomatida', 'SpeciesName': 'unclassified Leishmania'}
+{'Species': 'Thiomonas thermosulfata', 'Kingdom': 'Bacteria', 'Phylum': 'Pseudomonadota', 'Class': 'Betaproteobacteria', 'Order': 'Burkholderiales', 'Family': 'Burkholderiales genera incertae sedis', 'Genus': 'Thiomonas', 'SpeciesName': 'Thiomonas thermosulfata'}
+{'Species': 'Elgaria kingii', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Elgaria kingii'}
+{'Species': 'Abies grandis', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Abies grandis'}
+{'Species': 'Acroptilon', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Acroptilon'}
+{'Species': 'Cephalonoplos', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Cephalonoplos'}
+{'Species': 'Methylomicrobium agile', 'Kingdom': 'Bacteria', 'Phylum': 'Pseudomonadota', 'Class': 'Gammaproteobacteria', 'Order': 'Methylococcales', 'Family': 'Methylococcaceae', 'Genus': 'Methylomicrobium', 'SpeciesName': 'Methylomicrobium agile'}
+{'Species': 'Batrachia', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None, 'Error': 'HTTP Error 400: Bad Request'}
+{'Species': 'Volutaria', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Volutaria'}
+{'Species': 'Apis mellifera mellifera', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Protostomia', 'SpeciesName': 'Apis mellifera mellifera'}
+{'Species': 'Astigmata', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Protostomia', 'SpeciesName': 'Astigmata'}
+{'Species': 'unclassified Bacteroidaceae', 'Kingdom': 'Bacteria', 'Phylum': 'FCB group', 'Class': 'Bacteroidota/Chlorobiota group', 'Order': 'Bacteroidota', 'Family': 'Bacteroidia', 'Genus': 'Bacteroidales', 'SpeciesName': 'unclassified Bacteroidaceae'}
+{'Species': 'Torilis', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Torilis'}
+{'Species': 'Pseudopestalotiopsis elaeidis', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Fungi', 'Order': 'Dikarya', 'Family': 'Ascomycota', 'Genus': 'saccharomyceta', 'SpeciesName': 'Pseudopestalotiopsis elaeidis'}
+{'Species': 'Pseudoregma panicola', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Protostomia', 'SpeciesName': 'Pseudoregma panicola'}
+{'Species': 'Parthenium argentatum', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Parthenium argentatum'}
+{'Species': 'Hubbardiidae', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Protostomia', 'SpeciesName': 'Hubbardiidae'}
+{'Species': 'Lithophragma affine', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Lithophragma affine'}
+{'Species': 'Aralia chinensis', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Aralia chinensis'}
+{'Species': 'Parapentas', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Parapentas'}
+{'Species': 'unclassified Chordopoxvirinae', 'Kingdom': 'Varidnaviria', 'Phylum': 'Bamfordvirae', 'Class': 'Nucleocytoviricota', 'Order': 'Pokkesviricetes', 'Family': 'Chitovirales', 'Genus': 'Poxviridae', 'SpeciesName': 'unclassified Chordopoxvirinae'}
+{'Species': 'Pinckneya', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Pinckneya'}
+{'Species': 'Ophiostoma macrosporum', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Fungi', 'Order': 'Dikarya', 'Family': 'Ascomycota', 'Genus': 'saccharomyceta', 'SpeciesName': 'Ophiostoma macrosporum'}
+{'Species': 'Amphora coffeiformis', 'Kingdom': 'Eukaryota', 'Phylum': 'Sar', 'Class': 'Stramenopiles', 'Order': 'Ochrophyta', 'Family': 'Bacillariophyta', 'Genus': 'Bacillariophyceae', 'SpeciesName': 'Amphora coffeiformis'}
+{'Species': 'Spinulosacea', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Spinulosacea'}
+{'Species': 'Suksdorfia violacea', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Suksdorfia violacea'}
+{'Species': 'Rubus rosifolius', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Rubus rosifolius'}
+{'Species': 'Oreochromis pangani', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Oreochromis pangani'}
+{'Species': 'Leiopelma hamiltoni', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Leiopelma hamiltoni'}
+{'Species': 'Nosema sp.', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Fungi', 'Order': 'Fungi incertae sedis', 'Family': 'Microsporidia', 'Genus': 'Apansporoblastina', 'SpeciesName': 'Nosema sp.'}
+{'Species': 'unclassified Chloroflexaceae', 'Kingdom': 'Bacteria', 'Phylum': 'Terrabacteria group', 'Class': 'Chloroflexota', 'Order': 'Chloroflexia', 'Family': 'Chloroflexales', 'Genus': 'Chloroflexineae', 'SpeciesName': 'unclassified Chloroflexaceae'}
+{'Species': 'Myrrhis odorata', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Myrrhis odorata'}
+{'Species': 'Neopterygii', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Neopterygii'}
+{'Species': 'Veillonella atypica', 'Kingdom': 'Bacteria', 'Phylum': 'Terrabacteria group', 'Class': 'Bacillota', 'Order': 'Negativicutes', 'Family': 'Veillonellales', 'Genus': 'Veillonellaceae', 'SpeciesName': 'Veillonella atypica'}
+{'Species': 'Haplochromis velifer', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Haplochromis velifer'}
+{'Species': 'Podonominae', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Protostomia', 'SpeciesName': 'Podonominae'}
+{'Species': 'Galactites duriaei', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Galactites duriaei'}
+{'Species': 'Influenza A virus (A/Chicken/Hong Kong/786/97 (H5N1))', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None}
+{'Species': 'Tarchonanthus camphoratus', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Tarchonanthus camphoratus'}
+{'Species': 'Planktothrix rubescens', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None, 'Error': 'HTTP Error 400: Bad Request'}
+{'Species': 'Orothamnus', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Orothamnus'}
+{'Species': 'Carthamus mitissimus', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Carthamus mitissimus'}
+{'Species': 'Aspergillus aurantiobrunneus', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Fungi', 'Order': 'Dikarya', 'Family': 'Ascomycota', 'Genus': 'saccharomyceta', 'SpeciesName': 'Aspergillus aurantiobrunneus'}
+{'Species': 'Sclerocleista ornata', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Fungi', 'Order': 'Dikarya', 'Family': 'Ascomycota', 'Genus': 'saccharomyceta', 'SpeciesName': 'Sclerocleista ornata'}
+{'Species': 'Gonyaulacales', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None, 'Error': 'list index out of range'}
+{'Species': 'Centaurea diluta', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Centaurea diluta'}
+{'Species': 'Apioclypea livistonae', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None}
+{'Species': 'Aspergillus raperi', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Fungi', 'Order': 'Dikarya', 'Family': 'Ascomycota', 'Genus': 'saccharomyceta', 'SpeciesName': 'Aspergillus raperi'}
+{'Species': 'uncultured bacterium BMS1-25', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None, 'Error': 'list index out of range'}
+{'Species': 'Melozone albicollis', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Melozone albicollis'}
+{'Species': 'Tyrophagus', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Protostomia', 'SpeciesName': 'Tyrophagus'}
+{'Species': 'Chinese lamb rotavirus', 'Kingdom': 'Riboviria', 'Phylum': 'Orthornavirae', 'Class': 'Duplornaviricota', 'Order': 'Resentoviricetes', 'Family': 'Reovirales', 'Genus': 'Sedoreoviridae', 'SpeciesName': 'Lamb rotavirus'}
+{'Species': 'Ramularia scabiosae', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None}
+{'Species': 'Centaurea macrocephala', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Centaurea macrocephala'}
+{'Species': 'Brachidontes variabilis', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Protostomia', 'SpeciesName': 'Brachidontes variabilis'}
+{'Species': 'Coccoid pelagophyte CCMP1395', 'Kingdom': 'Eukaryota', 'Phylum': 'Sar', 'Class': 'Stramenopiles', 'Order': 'Ochrophyta', 'Family': 'Pelagophyceae', 'Genus': 'unclassified Pelagophyceae', 'SpeciesName': 'Coccoid pelagophyte CCMP1395'}
+{'Species': 'Ursinia', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Ursinia'}
+{'Species': 'Cardiolucina semperiana', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Protostomia', 'SpeciesName': 'Cardiolucina semperiana'}
+{'Species': 'Centaurea melitensis', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Centaurea melitensis'}
+{'Species': 'Prionitis lanceolata gall symbiont', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None, 'Error': 'list index out of range'}
+{'Species': 'Pellaea boivinii', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Pellaea boivinii'}
+{'Species': 'Methylomonas fodinarum', 'Kingdom': 'Bacteria', 'Phylum': 'Pseudomonadota', 'Class': 'Gammaproteobacteria', 'Order': 'Methylococcales', 'Family': 'Methylococcaceae', 'Genus': 'Methylomonas', 'SpeciesName': 'Methylomonas fodinarum'}
+{'Species': 'Nertera', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Nertera'}
+{'Species': 'Myelosperma tumidum', 'Kingdom': None, 'Phylum': None, 'Class': None, 'Order': None, 'Family': None, 'Genus': None, 'SpeciesName': None}
+{'Species': 'Sinclairia pringlei', 'Kingdom': 'Eukaryota', 'Phylum': 'Viridiplantae', 'Class': 'Streptophyta', 'Order': 'Streptophytina', 'Family': 'Embryophyta', 'Genus': 'Tracheophyta', 'SpeciesName': 'Sinclairia pringlei'}
+{'Species': 'Mantella', 'Kingdom': 'Eukaryota', 'Phylum': 'Opisthokonta', 'Class': 'Metazoa', 'Order': 'Eumetazoa', 'Family': 'Bilateria', 'Genus': 'Deuterostomia', 'SpeciesName': 'Mantella'}
+
+#Sort the data manually
+#Now that species with species name and taxid is known, combine them and make an otu_table with otu and abundance data of each sample
+#Fetched lineage details with the above python code
+#unidentified bacteria without any lineage details, cloning vectors were removed
+#required otu, otu_index and metadata tables were made
+
+#Data analysis in R
+#Install libraries
+library(tidyverse)
+library(readxl)
+library(phyloseq)
+library(DESeq2)
+library(ggplot2)
+library(cowplot)
+library(RColorBrewer)
+
+#Load in data files
+otu <- read_xlsx("emodin_otu_table.xlsx")
+otu_index <- read_xlsx("emodin_otu_index.xlsx")
+metadata <- read_xlsx("emodin_metadata.xlsx")
+
+#Prepare tables for phyloseq object
+otu_mat <- as.matrix(otu[-1])
+rownames(otu_mat) <- as.matrix(otu[1])
+otu_reads <- otu
+for (i in seq_len(nrow(metadata))){
+  otu_reads[, metadata$sample.name[i]] <- (metadata$num.reads[i]*(otu[, metadata$sample.name[i]]/100))
+}
+otu_reads_mat <- as.matrix(otu_reads[-1])
+rownames(otu_reads_mat) <- as.matrix(otu_reads[1])
+
+tax_mat <- as.matrix(otu_index[-c(1:2)])
+rownames(tax_mat) <- as.matrix(otu[1])
+
+metadata_df <- as.data.frame(metadata[-1], stringsAsFactors = TRUE)
+rownames(metadata_df) <- as.matrix(metadata[1])
+
+#Create phyloseq object
+## Relative abundance OTUs
+# OTU <- otu_table(otu_mat, taxa_are_rows = TRUE)
+## Simulated OTU reads
+OTU <- otu_table(otu_reads_mat, taxa_are_rows = TRUE)
+TAX <- tax_table(tax_mat)
+META <- sample_data(metadata_df)
+
+emo <- phyloseq(OTU, TAX, META)
+
+emo <- filter_taxa(emo, function(x) sum(x > 3) > (0.2*length(x)), TRUE)
+
+otu_table_out <- as.data.frame(otu_table(emo)) %>% rownames_to_column("id")
+write_csv(otu_table_out, "TMPE_phyloseq_otu_table.csv")
+
+#Perform differential abundance analysis with DESeq2
+alpha <- 0.05
+# Checking levels
+as.factor(sample_data(emo)$sample.group)
+
+# Compare Control vs Treatment
+emo_1 <- subset_samples(emo, sample.group %in% c("Control", "Treatment"))
+levels(as.factor(sample_data(emo_1)$sample.group))
+contrast <- c("sample.group", 
+              levels(as.factor(sample_data(emo_1)$sample.group))[2],
+              levels(as.factor(sample_data(emo_1)$sample.group))[1])
+
+emo_1_dge <- phyloseq_to_deseq2(emo_1, ~ sample.group)
+
+## converting counts to integer mode
+## Warning in DESeqDataSet(se, design = design, ignoreRank): some variables in
+## design formula are characters, converting to factors
+emo_1_dge <- DESeq(emo_1_dge, test="Wald", fitType="parametric")
+
+## estimating size factors
+## estimating dispersions
+## gene-wise dispersion estimates
+## mean-dispersion relationship
+## final dispersion estimates
+## fitting model and testing
+## -- replacing outliers and refitting for 39 genes
+## -- DESeq argument 'minReplicatesForReplace' = 7 
+## -- original counts are preserved in counts(dds)
+## estimating dispersions
+## fitting model and testing
+
+emo_1_dge_res <- results(emo_1_dge, contrast = contrast, cooksCutoff = FALSE)
+emo_1_dge_sigtab <- emo_1_dge_res[which(emo_1_dge_res$pvalue < alpha), ]
+emo_1_dge_sigtab <- cbind(as(emo_1_dge_sigtab, "data.frame"), as(tax_table(emo_1)[,-1][rownames(emo_1_dge_sigtab), ], "matrix"))
+emo_1_dge_res <- cbind(as(emo_1_dge_res, "data.frame"), as(tax_table(emo_1)[,-1], "matrix"))
+write.csv(emo_1_dge_res, file = "TMEP_emo_1_dge_res.csv")
+
+# Compare Control vs Disease
+emo_2 <- subset_samples(emo, sample.group %in% c("Control", "Disease"))
+levels(as.factor(sample_data(emo_2)$sample.group))
+contrast <- c("sample.group", 
+              levels(as.factor(sample_data(emo_2)$sample.group))[2],
+              levels(as.factor(sample_data(emo_2)$sample.group))[1])
+
+emo_2_dge <- phyloseq_to_deseq2(emo_2, ~ sample.group)
+
+## converting counts to integer mode
+## Warning in DESeqDataSet(se, design = design, ignoreRank): some variables in
+## design formula are characters, converting to factors
+
+emo_2_dge <- DESeq(emo_2_dge, test="Wald", fitType="parametric")
+
+## estimating size factors
+## estimating dispersions
+## gene-wise dispersion estimates
+## mean-dispersion relationship
+## final dispersion estimates
+## fitting model and testing
+## -- replacing outliers and refitting for 39 genes
+## -- DESeq argument 'minReplicatesForReplace' = 7 
+## -- original counts are preserved in counts(dds)
+## estimating dispersions
+## fitting model and testing
+
+emo_2_dge_res <- results(emo_2_dge, contrast = contrast, cooksCutoff = FALSE)
+emo_2_dge_sigtab <- emo_2_dge_res[which(emo_2_dge_res$pvalue < alpha), ]
+emo_2_dge_sigtab <- cbind(as(emo_2_dge_sigtab, "data.frame"), as(tax_table(emo_2)[,-1][rownames(emo_2_dge_sigtab), ], "matrix"))
+emo_2_dge_res <- cbind(as(emo_2_dge_res, "data.frame"), as(tax_table(emo_2)[,-1], "matrix"))
+write.csv(emo_2_dge_res, file = "TMPE_emo_2_dge_res.csv")
+
+# Compare treatment vs disease
+emo_3 <- subset_samples(emo, sample.group %in% c("Treatment", "Disease"))
+levels(as.factor(sample_data(emo_3)$sample.group))
+contrast <- c("sample.group", 
+              levels(as.factor(sample_data(emo_3)$sample.group))[1],
+              levels(as.factor(sample_data(emo_3)$sample.group))[2])
+
+emo_3_dge <- phyloseq_to_deseq2(emo_3, ~ sample.group)
+emo_3_dge <- DESeq(emo_3_dge, test="Wald", fitType="parametric")
+
+
+emo_3_dge_res <- results(emo_3_dge, contrast = contrast, cooksCutoff = FALSE)
+emo_3_dge_sigtab <- emo_3_dge_res[which(emo_3_dge_res$pvalue < alpha), ]
+emo_3_dge_sigtab <- cbind(as(emo_3_dge_sigtab, "data.frame"), as(tax_table(emo_3)[,-1][rownames(emo_3_dge_sigtab), ], "matrix"))
+emo_3_dge_res <- cbind(as(emo_3_dge_res, "data.frame"), as(tax_table(emo_3)[,-1], "matrix"))
+write.csv(emo_3_dge_res, file = "TMPE_emo_3_dge_res.csv")
+
+#Make plots
+
+# scale_fill_discrete <- function(palname = "Set1", ...) {
+#     scale_fill_brewer(palette = palname, ...)
+# }
+
+
+#theme_set(theme_bw())
+#pal <- brewer.pal(length(unique(tax_table(emo)[,4])), "Set3")
+#names(pal) <- unique(tax_table(emo)[,4])
+
+unique_categories <- unique(tax_table(emo)[, 4])
+unique_categories <- unique_categories[1:9]  # Limit to the first 9 unique categories
+
+pal <- brewer.pal(length(unique_categories), "Set1")
+names(pal) <- unique_categories
+
+objects <- c("emo_1_dge_sigtab", "emo_2_dge_sigtab", "emo_3_dge_sigtab")
+for (i in objects){
+  df <- eval(as.name(i))
+  
+  # Phylum order
+  x = tapply(df$log2FoldChange, df$phylum, function(x) max(x))
+  x = sort(x, TRUE)
+  df$phylum = factor(as.character(df$phylum), levels = names(x))
+  
+  # Species order
+  x = tapply(df$log2FoldChange, df$species, function(x) max(x))
+  x = sort(x, TRUE)
+  df$species = factor(as.character(df$species), levels = names(x))
+  
+  # Draw plot
+  p1 <- ggplot(df, aes(x = species, y = log2FoldChange, color = phylum)) +
+    scale_color_manual(name = "Phylum", values = subset(pal, names(pal) %in% df$phylum)) +
+    geom_point(size = 6) +
+    geom_hline(yintercept = 0, linetype = "dashed", color = "blue") +
+    labs(x = "") +
+    theme(axis.text.x = element_text(angle = -90, hjust = 0, vjust=0.5),
+          axis.title.y = element_text(margin = margin(r = 15)),
+          # legend.text = element_text(size = 14),
+          text = element_text(size = 18),
+          aspect.ratio = 1)
+  if (i == "emo_1_dge_sigtab") {
+    p1 <- p1 + ggtitle("Control vs Treatment", subtitle = "log2FoldChange = log2(Treatment/Control)")
+  }
+  if (i == "emo_2_dge_sigtab") {
+    p1 <- p1 + ggtitle("Control vs Disease", subtitle = "log2FoldChange = log2(Disease/Control)")
+  }
+  if (i == "emo_3_dge_sigtab") {
+    p1 <- p1 + ggtitle("Treatment vs Disease", subtitle = "log2FoldChange = log2(Disease/Treatment)")
+  }
+  print(p1)  
+  
+  # Write plot to file  
+  fig_name <- paste0("l2fc_fig_", i, ".png", sep = "")
+  png(file = fig_name, width = 8.5, height = 11, units = "in", res = 300)
+  print(p1)
+  dev.off()
+  
+}
+
+
+
+library(ggplot2)
+library(reshape2)
+library(readxl)
+library(pals)
+library(dplyr)
+library(randomcoloR)
+
+pc = read_xlsx("emo_stack.xlsx")
+
+c21 <- c( 
+"green4","#4b13f2","#E31A1C","dodgerblue2","#FF7F00","#F05be6","#dcbeff","gold1", "skyblue2" ,"#bfef45",
+"#469990", "#ffd8b1","#d9796a","#a83449","#87f5d4","#a200ff","gray90","#1F77B4","#17BECF","black","gray65"
+)
+
+pcm = melt(pc, id = c("id"))
+
+pcm <- pcm %>%    
+  group_by(id,variable) %>%    
+  summarize(`value` = mean(value))
+
+pcm = pcm[pcm$value>0.00,]
+pcm$id <- factor(pcm$id,levels=unique(pcm$id))
+
+pcm_init_totals = aggregate(pcm$value, by=list(pcm$id), FUN=sum)
+pcm_init_empty = data.frame(c(pcm_init_totals$Group.1),c(100-pcm_init_totals$x))
+
+mx <- ggplot(pcm, aes(x = id, fill = variable, y = value, group = variable)) + 
+  geom_bar(stat = "identity", colour = "black") + 
+  theme(axis.text.x = element_text(angle = 0, size = 18, colour = "black", vjust = 0.8, face= "bold"), 
+        axis.title.y = element_text(size = 16, face = "bold"), 
+        legend.title = element_text(size = 14, face = "bold"), 
+        legend.text = element_text(size = 16, face = "bold.italic", colour = "black"),
+        axis.text.y = element_text(colour = "black", size = 16, face = "bold"),
+        legend.spacing.y = unit(0.3, 'cm'),
+        legend.key.size = unit(2, 'lines')) +  # Increase the legend key size
+  scale_y_continuous(expand = c(0,0)) + 
+  labs(x = "Sample Groups", y = "Relative Abundance (%)", fill = "Species") + 
+  scale_fill_manual(values = c21, breaks = (pcm$variable)) +
+  guides(fill = guide_legend(byrow = TRUE)) +
+  labs(fill = "Species") +  # Adding text "Species" on the legend
+  theme(legend.key.height = unit(1, "cm"),  # Adjust the height of the legend key
+        legend.text = element_text(size = 16, face = "italic"),  # Increase size and set to italic for legend text
+        legend.title = element_text(face = "bold", size = 16),  # Make legend title bold and increase text size
+        axis.title.x = element_text(face = "bold", size = 20),  # Make x-axis title bold and increase text size
+        axis.title.y = element_text(face = "bold"),  # Make y-axis title bold
+        plot.title = element_text(size = 20, face = "bold"))  # Increase size of plot title
+
+# Print the plot to the plot viewer in R
+print(mx)
+
+fig_name <- paste0("Stackedemodin.png", sep = "")
+png(file = fig_name, width = 12, height = 9, units = "in", res = 300)
+print(mx)
+dev.off()
+
