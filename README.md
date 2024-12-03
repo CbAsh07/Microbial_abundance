@@ -8,14 +8,14 @@
 
 <h2>Languages and Utilities Used</h2>
 <ul>
-    <li><b>Linux</b></li>
-    <li><b>High Performance Computing: Hyperion Phase III </b></li>
     <li><b>R</b></li>
+    <li><b>High Performance Computing: Hyperion Phase III </b></li>   
 </ul>
 
 <h2>Environments Used</h2>
 <ul>
     <li><b>MacOS</b></li>
+    <li><b>Linux</b></li>
 </ul>
 
 <h2>Microbial composition analysis</h2>
