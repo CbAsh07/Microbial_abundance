@@ -22,7 +22,7 @@
 <p align="center">
     <img src="https://github.com/CbAsh07/metaphlan/blob/main/emodin.png" alt="Microbial composition analysis" width="80%" height="80%">
     <br />
-    Microbial composition analysis
+    Comparison of microbial abundance in control, treatment and diseased sample groups
 </p>
 
 
