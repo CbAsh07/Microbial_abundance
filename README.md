@@ -2,7 +2,7 @@
 
 <h2>Description</h2>
 <p>
-  Profiling the composition of gut microbial communities (Bacteria, Archaea and Eukaryotes) from metagenomic shotgun sequencing data to assess their relative abundance post treatment with emodin.
+  Profiling the composition of gut microbial communities (Bacteria, Archaea and Eukaryotes) from metagenomic shotgun sequencing data to assess their relative abundance in gut of mice, post treatment with emodin.
   This is a part of a project while working as a Research speialist I at University of South Carolina, USA.
 </p>
 
