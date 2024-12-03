@@ -20,7 +20,7 @@
 
 <h2>Microbial composition analysis</h2>
 <p align="center">
-    <img src="https://tinypic.host/image/emodin.2Mb0xx" alt="Microbial composition analysis" width="80%" height="80%">
+    <img src="https://github.com/CbAsh07/metaphlan/blob/main/emodin.png" alt="Microbial composition analysis" width="80%" height="80%">
     <br />
     Microbial composition analysis
 </p>
