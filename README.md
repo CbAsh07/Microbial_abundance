@@ -1,4 +1,4 @@
-<h1>Gut microbial abundance post emodin treatment</h1>
+<h1>Gut microbial abundance post drug treatment</h1>
 
 <h2>Description</h2>
 <p>
